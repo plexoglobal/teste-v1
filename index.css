@@ -1,0 +1,24 @@
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0fdf4;
+}
+
+.brand-font {
+  font-family: 'Nunito', sans-serif;
+}
+
+.stripe-pattern {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0,
+    rgba(255, 255, 255, 0.4) 6px,
+    rgba(255, 255, 255, 0.2) 6px,
+    rgba(255, 255, 255, 0.2) 12px
+  );
+}
+

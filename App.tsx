@@ -564,7 +564,7 @@ export default function App() {
              { q: "Funciona em grupos que eu não sou admin?", a: "Sim! Basta adicionar nossa corujinha como participante normal." },
              { q: "Quantos grupos posso monitorar?", a: "Ilimitado. Monitore 1, 5, 10, 50 grupos. Sem custo adicional." },
              { q: "E se eu não gostar?", a: "7 dias de garantia. Não gostou? Devolvemos 100% do valor." },
-             { q: "Como funciona a IA?", a: "Ela analisa cada mensagem e identifica padrões de 'pedido de serviço': palavras como 'preciso', 'procuro', 'orçamento', 'indica', etc." },
+             { q: "Como funciona a IA?", a: "Temos um sistema com as melhores IAs do mercado trabalhando 24 horas por dia para encontrar as oportunidades nas mensagens trocadas em TODOS os grupos que você faz parte. Elas analisam cada mensagem e identificam padrões de 'pedido de serviço': palavras como 'preciso', 'procuro', 'orçamento', 'indica', etc." },
              { q: "Vai encher meu WhatsApp de notificação?", a: "Não! Só alertamos sobre oportunidades reais. Nada de spam." },
              { q: "E a privacidade dos grupos?", a: "Total. Nossa corujinha só analisa mensagens, nunca compartilha ou armazena conteúdo sensível." },
              { q: "Posso cancelar a qualquer momento?", a: "Sim. Sem multa, sem burocracia." }

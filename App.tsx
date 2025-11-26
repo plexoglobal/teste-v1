@@ -497,14 +497,14 @@ export default function App() {
              </div>
 
              <div className="text-center pt-10 pb-6 px-6">
-                <p className="text-gray-400 line-through text-xl font-bold">R$ 97/mês</p>
+                <p className="text-gray-400 line-through text-xl font-bold">R$ 67/mês</p>
                 <div className="flex justify-center items-end gap-1 text-primary-600 mt-2">
                    <span className="text-3xl font-black mb-2">R$</span>
-                   <span className="text-7xl font-black tracking-tighter">67</span>
+                   <span className="text-7xl font-black tracking-tighter">27</span>
                    <span className="text-gray-500 font-bold mb-2">/mês</span>
                 </div>
                 <p className="text-sm font-bold text-primary-600 bg-primary-50 inline-block px-3 py-1 rounded-full mt-4">
-                  Apenas para os primeiros 20 clientes
+                  De R$ 67 por R$ 27/mês para os primeiros 20 clientes
                 </p>
              </div>
 
@@ -537,7 +537,7 @@ export default function App() {
 
              <div className="px-4 pb-4">
                <a 
-                 href="https://wa.me/5519983034541" 
+                 href="https://payment.ticto.app/O69866FB8" 
                  target="_blank" 
                  rel="noopener noreferrer"
                  className="block"

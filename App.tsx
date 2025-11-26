@@ -122,12 +122,9 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button onClick={scrollToPricing} size="xl" className="font-extrabold text-lg shadow-[0_6px_0_rgb(21,128,61)] active:shadow-none active:translate-y-[6px] hover:-translate-y-0.5 transition-all">
-                QUERO CAPTURAR OPORTUNIDADES
+                COMEÇAR AGORA
               </Button>
             </div>
-            <p className="text-sm text-gray-500 font-bold">
-              🔥 R$ 67/mês Primeiros 20 clientes · Preço sobe em breve
-            </p>
           </div>
 
           {/* Right Visual (Notification Mockup) */}
@@ -414,11 +411,11 @@ export default function App() {
       {/* --- Included Features --- */}
       <Section className="bg-white">
         <div className="bg-primary-50 rounded-[3rem] p-8 md:p-12 border-4 border-primary-100 relative overflow-hidden">
-           {/* Construction Badge */}
+           {/* Early Access Badge */}
            <div className="absolute top-6 right-6 z-10">
              <div className="bg-amber-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 animate-pulse">
-               <span className="text-sm">🚧</span>
-               <span className="text-xs font-black uppercase tracking-wide">Em Construção</span>
+               <span className="text-sm">✨</span>
+               <span className="text-xs font-black uppercase tracking-wide">Benefícios de Early Adopter</span>
              </div>
            </div>
            
@@ -428,7 +425,7 @@ export default function App() {
                   <h2 className="text-3xl font-black text-gray-900 brand-font">Tudo que Você Precisa</h2>
                 </div>
                 <p className="text-sm text-amber-700 bg-amber-100 inline-block px-3 py-1 rounded-lg font-bold mb-6">
-                  ⚠️ Algumas funcionalidades ainda estão em desenvolvimento
+                  ⚡ Entre agora e garanta acesso antecipado a todas essas funcionalidades conforme forem liberadas – sem pagar nada a mais por isso.
                 </p>
                 <ul className="space-y-4">
                   {[

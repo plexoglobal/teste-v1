@@ -281,7 +281,9 @@ export default function App() {
         </div>
 
         <div className="mt-16 text-center">
-          <Button onClick={scrollToPricing} size="lg" className="shadow-[0_4px_0_rgb(21,128,61)] active:translate-y-[4px] active:shadow-none">COMEÇAR AGORA - R$ 67/mês</Button>
+          <Button onClick={scrollToPricing} size="lg" className="shadow-[0_4px_0_rgb(21,128,61)] active:translate-y-[4px] active:shadow-none">
+            COMEÇAR AGORA
+          </Button>
         </div>
       </Section>
 
@@ -339,7 +341,7 @@ export default function App() {
                <p className="text-gray-400 font-medium">Veja o que nossos clientes estão dizendo</p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-3 gap-6 mb-8 mt-6">
               {[
                 {
                   role: "Agências Digitais", 

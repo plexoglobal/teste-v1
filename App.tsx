@@ -326,6 +326,77 @@ export default function App() {
             description="Basta fechar 1 cliente por mês para pagar o investimento 10x."
           />
         </div>
+
+        {/* Bonus Spreadsheet Banner */}
+        <div className="mt-12">
+          <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary-50 via-white to-primary-50 border-2 border-primary-100 rounded-3xl shadow-lg px-6 py-6 md:px-10 md:py-8 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            {/* Text - Left */}
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-primary-100/70 text-primary-800 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wide mb-3">
+                <span className="text-sm">🎁</span>
+                <span>Bônus exclusivo para assinantes</span>
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-2">
+                Não está em tantos grupos assim? A gente resolve isso pra você.
+              </h3>
+              <p className="text-sm md:text-base text-gray-700 font-medium mb-3">
+                Além da corujinha monitorando seus grupos, você recebe uma planilha pronta com mais de{" "}
+                <span className="font-extrabold text-primary-600">50+ grupos de oportunidades reais</span> para entrar hoje mesmo.
+              </p>
+              <p className="text-xs md:text-sm text-gray-600 font-semibold">
+                Grupos de freelancers, marketing, tech, vendas, produtora, agência e muito mais — selecionados a dedo pra você ter{" "}
+                <span className="font-bold text-primary-700">mais chances de negócio logo na primeira semana</span>.
+              </p>
+            </div>
+
+            {/* Image / Visual - Right */}
+            <div className="w-full md:w-64 lg:w-72 flex justify-center">
+              <div className="relative w-full max-w-xs">
+                <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-primary-100 border border-primary-300 flex items-center justify-center text-xl shadow-sm">
+                  📊
+                </div>
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-amber-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                    </div>
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">Planilha Oportunizap</span>
+                  </div>
+                  <div className="overflow-hidden rounded-xl border border-gray-100 bg-gray-50">
+                    <div className="grid grid-cols-4 text-[10px] font-bold text-gray-600 bg-gray-100 border-b border-gray-200">
+                      <div className="px-2 py-1">Grupo</div>
+                      <div className="px-2 py-1">Nicho</div>
+                      <div className="px-2 py-1">Tipo</div>
+                      <div className="px-2 py-1 text-right">Membros</div>
+                    </div>
+                    {[
+                      ["Freelas Brasil", "Freelancer", "Oportunidades", "1.230"],
+                      ["Marketing Jobs BR", "Marketing", "Vagas & Jobs", "980"],
+                      ["Dev & Tech Oportunidades", "Tech", "Projetos & Indicações", "1.540"],
+                    ].map((row, idx) => (
+                      <div
+                        key={idx}
+                        className={`grid grid-cols-4 text-[10px] md:text-[11px] font-medium ${
+                          idx % 2 === 0 ? "bg-white" : "bg-gray-50"
+                        }`}
+                      >
+                        <div className="px-2 py-1 truncate">{row[0]}</div>
+                        <div className="px-2 py-1 truncate">{row[1]}</div>
+                        <div className="px-2 py-1 truncate">{row[2]}</div>
+                        <div className="px-2 py-1 text-right text-primary-600 font-bold">{row[3]}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-[11px] text-gray-500 font-semibold">
+                    Bônus incluso automaticamente no seu acesso. Nada de pagar a mais por isso.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Section>
 
       {/* --- Social Proof --- */}
@@ -518,7 +589,7 @@ export default function App() {
                </div>
              </div>
 
-             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-8 mx-4">
+             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-6 mx-4">
                <ul className="space-y-4">
                  {[
                    "Acesso imediato",
@@ -532,6 +603,25 @@ export default function App() {
                    </li>
                  ))}
                </ul>
+             </div>
+
+             {/* Bonus callout inside pricing to fix perceived value */}
+             <div className="bg-primary-50/80 p-5 rounded-2xl border border-primary-100 mx-4 mb-8 flex gap-4 items-start">
+               <div className="w-10 h-10 rounded-2xl bg-primary-100 flex items-center justify-center shrink-0 border border-primary-200">
+                 <span className="text-xl">📊</span>
+               </div>
+               <div className="text-left">
+                 <p className="text-xs font-black text-primary-700 uppercase tracking-wide mb-1">
+                   Bônus incluso no seu acesso
+                 </p>
+                 <p className="text-sm font-bold text-gray-800 leading-snug">
+                   Planilha com <span className="text-primary-700">50+ grupos de oportunidades</span> para você entrar
+                   e já começar a lucrar — sem pagar nada a mais por isso.
+                 </p>
+                 <p className="mt-1 text-[11px] text-gray-600 font-medium">
+                   Só esse bônus já vale facilmente mais do que a mensalidade, mas está incluso enquanto essa oferta estiver no ar.
+                 </p>
+               </div>
              </div>
 
              <div className="px-4 pb-4">

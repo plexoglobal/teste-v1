@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  Bell, 
-  MessageCircle, 
-  Clock, 
-  Zap, 
-  Target, 
-  TrendingUp, 
-  ShieldCheck, 
-  CheckCircle2, 
+import React, { useState } from 'react';
+import {
+  Bell,
+  MessageCircle,
+  Clock,
+  Zap,
+  Target,
+  TrendingUp,
+  ShieldCheck,
+  CheckCircle2,
   XCircle,
   Menu,
   X,
@@ -42,7 +42,6 @@ const OwlLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({ days: 6, hours: 14, minutes: 23 });
   
   // FAQ State
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -55,6 +54,7 @@ export default function App() {
     const pricingSection = document.getElementById('pricing');
     pricingSection?.scrollIntoView({ behavior: 'smooth' });
   };
+
 
   // Mock Notification Animation
   const [notificationVisible, setNotificationVisible] = useState(true);
@@ -111,7 +111,7 @@ export default function App() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
               </span>
-              <span className="text-sm font-bold text-gray-600">Mais de 900 grupos monitorados</span>
+              <span className="text-sm font-bold text-gray-600">Mais de 500 grupos monitorados</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] brand-font">
@@ -573,20 +573,6 @@ export default function App() {
                    <span className="text-7xl font-black tracking-tighter">27</span>
                    <span className="text-gray-500 font-bold mb-2">/mês</span>
                 </div>
-                <p className="text-sm font-bold text-primary-600 bg-primary-50 inline-block px-3 py-1 rounded-full mt-4">
-                  De R$ 67 por R$ 27/mês para os primeiros 20 clientes
-                </p>
-             </div>
-
-             {/* Scarcity Bar */}
-             <div className="px-8 mb-8">
-               <div className="flex justify-between text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
-                 <span>Vendidos: 6</span>
-                 <span>Total: 20</span>
-               </div>
-               <div className="w-full bg-gray-100 rounded-full h-4 overflow-hidden">
-                 <div className="bg-primary-500 h-full rounded-full w-[30%] stripe-pattern"></div>
-               </div>
              </div>
 
              <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-6 mx-4">
@@ -617,9 +603,6 @@ export default function App() {
                  <p className="text-sm font-bold text-gray-800 leading-snug">
                    Planilha com <span className="text-primary-700">50+ grupos de oportunidades</span> para você entrar
                    e já começar a lucrar — sem pagar nada a mais por isso.
-                 </p>
-                 <p className="mt-1 text-[11px] text-gray-600 font-medium">
-                   Só esse bônus já vale facilmente mais do que a mensalidade, mas está incluso enquanto essa oferta estiver no ar.
                  </p>
                </div>
              </div>
@@ -713,7 +696,7 @@ export default function App() {
         <p className="mt-8 text-xs text-gray-600 font-bold">© {new Date().getFullYear()} Oportunizap. Todos os direitos reservados.</p>
       </footer>
 
-      {/* Sticky Bottom Bar for Mobile/Desktop Scarcity */}
+      {/* Sticky Bottom Bar for Mobile */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-4 z-40 md:hidden">
          <div className="flex items-center justify-between gap-4">
             <div className="text-xs">
@@ -722,21 +705,6 @@ export default function App() {
             </div>
             <Button onClick={scrollToPricing} size="md" className="font-bold">Garantir R$ 67/mês</Button>
          </div>
-      </div>
-      
-      {/* Desktop Floating Urgency (Bottom Right) */}
-      <div className="hidden md:block fixed bottom-8 right-8 z-40 animate-bounce-slow">
-        <div className="bg-[#1f2937] text-white p-4 rounded-2xl shadow-2xl max-w-xs border-2 border-gray-700">
-           <div className="flex justify-between items-center mb-2">
-             <span className="text-yellow-400 font-bold flex items-center gap-1 uppercase text-xs tracking-wider"><Clock size={14}/> Oferta acaba em:</span>
-           </div>
-           <div className="text-2xl font-mono font-bold tracking-widest text-center bg-gray-800 rounded-lg p-2 border border-gray-700 text-primary-400">
-             {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
-           </div>
-           <Button onClick={scrollToPricing} size="sm" className="w-full mt-3 bg-white text-gray-900 hover:bg-gray-100 font-bold border-none">
-             Garantir Preço
-           </Button>
-        </div>
       </div>
 
     </div>
